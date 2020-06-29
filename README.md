@@ -177,12 +177,12 @@ src
 | Task             | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------------- | :------: | :------------: | :-----------: | :---------: |
 | App.js           |    H     |     5 hrs      |     X         |      TBD      |
-| FoodList         |    H     |     5 hrs      |     X     |     TBD     |
+| FoodList         |    H     |     6 hrs      |     X     |     TBD     |
 | FoodDetails      |    H     |     5 hrs      |     X     |     TBD     |
 | Homepage         |    M     |     5 hrs      |     X     |     TBD     |
 | Search Bar       |    H     |     5 hrs      |     X     |     TBD     |
 | Accessing the API |    H     |     2 hrs      |     X     |     TBD     |
-| STYLING          |    H     |     8 hrs      |     X     |     TBD     |
+| STYLING          |    H     |     10 hrs      |     X     |     TBD     |
 | TOTAL            |          |     40 hrs      |     X     |     TBD     |
 
 <br>
