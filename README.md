@@ -143,10 +143,10 @@ src
       |__ wireframes
 |__ components/
       |__ Header.jsx
-      |__ Hero.jsx
-      |__ Ipsum.jsx
-      |__ Lorem.jsx
-      |__ CTA.jsx
+      |__ Search Bar.jsx
+      |__ FoodList.jsx
+      |__ FoodDetails.jsx
+      |__ Homepage.jsx
       |__ Footer.jsx
 ```
 
