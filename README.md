@@ -10,7 +10,7 @@
 
 ### Description
 
-_**SPOON FORK LAVENDER** is a restaurant discovery app that allows the users to search restaurants/cafes/bars in New York City. The user is able to display the name, locality, address and price range of the restaurant, as well as click on the "learn more" button that will lead them to the website of the restaurant. 
+_**SPOON FORK LAVENDER** is a restaurant discovery app that allows the users to search restaurants/cafes/bars in New York City. The user is able search for restaurant which will then display a list of restaurants. The user is able to click the restaurant from the list, which provides a more detailed card of the restaurant with the name, locality, type of cuisine, address and price range of the restaurant, as well as click on the "learn more" button that will lead them to the website of the restaurant. 
 
 <br>
 
@@ -126,7 +126,7 @@ Sample Query Results:
 |   Library    | Description                                |
 | :----------: | :----------------------------------------- |
 |    React     | using react to build out the application   |
-| React Router | _Lorem ipsum dolor sit amet, consectetur._ |
+| React Router | Use React Router to build componenets.     |
 
 <br>
 
@@ -158,15 +158,13 @@ src
 
 |  Component   |    Type    | state | props | hooks | Description                                |
 | :----------: | :--------: | :---: | :---: | :---: | :----------------------------------------- |
-|    App.js    |   class    |   y   |   n   |   n   | _Lorem ipsum dolor sit amet, consectetur._ |
-|    Header    | functional |   n   |   n   |   n   | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Navigation  | functional |   n   |   n   |   n   | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Home     | functional |   n   |   n   |   y   | _Lorem ipsum dolor sit amet, consectetur._ |
-|    Index     | functional |   n   |   n   |   y   | _Lorem ipsum dolor sit amet, consectetur._ |
-|    Detail    | functional |   n   |   n   |   y   | _Lorem ipsum dolor sit amet, consectetur._ |
-|   Gallery    |   class    |   y   |   n   |   y   | _Lorem ipsum dolor sit amet, consectetur._ |
-| Gallery Card | functional |   n   |   y   |   y   | _Lorem ipsum dolor sit amet, consectetur._ |
-|    Footer    | functional |   n   |   n   |   n   | _Lorem ipsum dolor sit amet, consectetur._ |
+|    App.js    |   class    |   x   |   x   |   x   | TBD |
+|    Header    | functional |   x   |   x   |   x   | TBD |
+|  FoodList    | functional |   x   |   x   |   x   | TBD |
+|  FoodDetail  | functional |   x   |   x   |   x   | TBD |
+|   Homepage   | functional |   x   |   x   |   x   | TBD |
+|    Footer    | functional |   x   |   x   |   x   | TBD |
+
 
 <br>
 
@@ -178,12 +176,14 @@ src
 
 | Task             | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Lorem Ipsum      |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Lorem Ipsum      |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Lorem Ipsum      |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Lorem Ipsum      |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL            |          |     6 hrs      |     3 hrs     |     TBD     |
+| App.js           |    H     |     5 hrs      |     X         |      TBD      |
+| FoodList         |    H     |     5 hrs      |     X     |     TBD     |
+| FoodDetails      |    H     |     5 hrs      |     X     |     TBD     |
+| Homepage         |    M     |     5 hrs      |     X     |     TBD     |
+| Search Bar       |    H     |     5 hrs      |     X     |     TBD     |
+| Accessing the API |    H     |     2 hrs      |     X     |     TBD     |
+| STYLING          |    H     |     8 hrs      |     X     |     TBD     |
+| TOTAL            |          |     40 hrs      |     X     |     TBD     |
 
 <br>
 
@@ -191,8 +191,7 @@ src
 
 > Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
 
-- _Lorem ipsum._
-- _Lorem ipsum._
+I would love the generate a random restaurant generator or a map feature on the app! 
 
 <br>
 
