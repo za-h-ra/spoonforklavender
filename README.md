@@ -51,9 +51,9 @@ _The **SPOON FORK LAVENDER** MVP requirements: The app will have a search featur
 
 #### MVP Goals
 
-— Homepage: Design a homepage with a "enter" feature that allows user to scroll down for more information.
-— Search Page: Implementation of the Zomato API/Yelp API via Search Bar that will allow users to search for the restaurant based on city or type of cuisine. 
-— List of Restaurants Page: This page will generate a list of restaurants once the Search button is clicked on the previous page.
+— Homepage: Design a homepage with a "enter" feature that allows user to scroll down for more information.<br>
+— Search Page: Implementation of the Zomato API/Yelp API via Search Bar that will allow users to search for the restaurant based on city or type of cuisine. <br>
+— List of Restaurants Page: This page will generate a list of restaurants once the Search button is clicked on the previous page.<br>
 — Restaurant Details Page: This page will generate one restaurant with the image and details of the restaurant.
 <br>
 
