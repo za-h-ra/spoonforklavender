@@ -1,26 +1,71 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, useEffect, useState } from "react";
+import { Route, Link } from "react-router-dom";
+import axios from "axios";
+import "./App.css";
+import Restaurant from "./Restaurant";
+import { render } from "@testing-library/react";
 
-function App() {
+export default function App() {
+  const [category, setCategory] = useState("");
+  const [restaurants, setRestaurant] = useState("");
+
+  const getRestaurants = async (categorySearched) => {
+    console.log("Get Restaurants is running", category);
+    const res = await axios
+      .get(
+        `${"https://cors-anywhere.herokuapp.com/"}https://api.yelp.com/v3/businesses/search?location=New_York_City&categories=${categorySearched}`,
+        {
+          headers: {
+            Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
+          },
+
+          params: {
+            categories: { category }, // handleChange  onChange
+          },
+        }
+      )
+
+      .then((res) => {
+        console.log(res, "hello");
+        setRestaurant(res.data.businesses);
+      })
+
+      .catch((err) => {
+        console.log("error");
+      });
+  };
+
+  // useEffect(() => {
+  //   getRestaurants();
+  // });
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    setCategory(e.target.value);
+    console.log(category);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    getRestaurants(category);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <form className="recipe-search" onSubmit={handleSubmit}>
+        <input
+          className="search-bar"
+          type="text"
+          value={category}
+          onChange={handleChange}
+        />
+        <button className="search-button" type="submit">
+          Search
+        </button>
+      </form>
+      {restaurants.map((restaurant) => {
+        <Restaurant />;
+      })}
     </div>
   );
 }
-
-export default App;
