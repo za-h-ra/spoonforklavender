@@ -1,38 +1,200 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f6fa;
+  font-family: "Quicksand", sans-serif;
+  box-sizing: border-box;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* HEADER */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100px;
+  background: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Restaurant-Image {
+  max-height: 60vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* SEARCH BAR */
+
+.restaurant-search {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transition: translate(-50%, -50%);
+  background: #2d3436;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+  box-shadow: 8px 5px 5px #d1d8e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.restaurant-search:hover > .search-bar {
+  width: 250px;
+  padding: 0 6px;
+}
+
+.restaurant-search:hover > .search-button {
+  background: linear-gradient(45deg, #D6A2E8, #FC427B);
+  border: none;
+  color: black;
+}
+
+.search-bar {
+  float: left;
+  border: none;
+  color: #ffffff;
+  background: none;
+  outline: none;
+  padding: 0;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.search-button {
+  color: white;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #5f27cd, #D6A2E8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  transition: 0.4s;
+}
+
+/* FOOTER */
+
+.footer-container {
+  position: fixed;
+  background: #2d3436;
+  color: #ffffff;
+  width: 100%;
+  bottom: 0px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+}
+
+.logo {
+  margin-top: 10px;
+  width: 350px;
+}
+
+.right-column h2 {
+  font-size: 25px;
+}
+
+.left-column h2 {
+  font-size: 25px;
+  text-decoration: uppercase;
+  text-align: left;
+  margin-left:
+}
+
+.border {
+  width: 100px;
+  height: 4px;
+  background: #D6A2E8;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.news-text-box {
+  flex: 1;
+  padding: 18px 40px;
+  font-size: 16px;
+  color: black;
+  border: none;
+  font-family: "Quicksand", sans-serif;
+  outline: none;
+  border-radius: 30px;
+  min-width: 260px;
+}
+
+.news-button {
+  padding: 18px 40px;
+  font-size: 16px;
+  color: #ffffff;
+  border: none;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  outline: none;
+  border-radius: 30px;
+  margin-left: 10px;
+  background: linear-gradient(45deg, #5f27cd, #D6A2E8);
+  cursor: pointer;
+  transition: opacity 0.3s linear;
+}
+
+.news-button:hover {
+  opacity: 0.1;
+}
+
+/* SOCIAL BUTTONS */
+
+.social-buttons a {
+  color: white;
+  margin-right: 25px;
+  display: inline-flex;
+  text-decoration: none;
+  font-size: 20px;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 10px;
+  /* border-radius: 50%;
+  background: linear-gradient(45deg, #ffda79, #f3a683); */
+}
+
+.social-buttons a::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, #5f27cd, #D6A2E8);
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.3s ease-in;
+}
+
+.social-buttons a:hover::before {
+  transform: scale(0);
+}
+
+.social-buttons a .social-icons {
+  transition: 0.3s ease-in;
+}
+
+.social-buttons a:hover .social-icons {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(2.2);
+  color: #ffffff;
 }
