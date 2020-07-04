@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Axios from "axios";
+import { FontAwesomeIcon, faFontAwesome } from "@fortawesome/react-fontawesome";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { faTemperatureHigh } from "@fortawesome/free-solid-svg-icons";
 
 export default function Weather() {
-  // const api = {
-  //   key: "5f60be87cb75b72fb2e9e22ea15890bd",
-  //   url: "https://api.openweathermap.org/data/2.5/weather"
-  // }
+
 
   const [weather, setWeather] = useState("");
 
@@ -19,32 +19,32 @@ export default function Weather() {
           q: "New York City",
         },
       }
-    )
-
-      .then((result) => {
-        console.log(result);
-        // setWeather(result);
-      })
-
-      .catch((err) => {
-        console.log("Error!");
-      });
+    );
+    setWeather(apiCall.data);
+    console.log(apiCall);
   };
 
-  getWeather();
+  useEffect(() => {
+    getWeather();
+  }, []);
 
   return (
     <>
-      <div className="weather-data">
-        <main className="weather-card">
-          <div className="weather-box">
-            <div className="location">
-              <p>{weather.name}</p>
+      {weather && (
+        <div className="weather-data">
+          <main className="weather-card">
+            <div className="weather-box">
+              <div className="location">
+                <p className="weather-temp">{Math.floor(weather.main.temp)} <FontAwesomeIcon icon={faTemperatureHigh} /></p>
+                <p className="weather-city">{weather.name}, {weather.sys.country}</p>
+               
+              </div>
+              {/* <div className="temperature">{weather}</div> */}
             </div>
-            {/* <div className="temperature">{weather}</div> */}
-          </div>
-        </main>
-      </div>
+          </main>
+        </div>
+      )}
     </>
   );
 }
+

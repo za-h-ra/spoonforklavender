@@ -3,24 +3,79 @@
 body {
   margin: 0;
   padding: 0;
+  text-decoration: none;
   background: #f5f6fa;
   font-family: "Quicksand", sans-serif;
   box-sizing: border-box;
   height: 100vh;
+  min-height: 500px;
+}
+
+.main-image {
+  height: 100%;
+  min-height: 200px;
+  position: absolute;
+  right: 0;
+}
+
+.main-title {
+  top: 50%;
 }
 
 /* HEADER */
 
 .header {
-  display: flex;
-  align-items: center;
-  height: 100px;
-  background: black;
-  color: white;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  padding: 5px 0;
+  top: 0;
+  z-index: 99;
+  transition: 0.3s linear;
+
+  /* background-color: transparent; */
 }
 
-.Restaurant-Image {
-  max-height: 60vh;
+.navbar {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 40px;
+}
+
+.header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  width: 450px;
+  text-align: center;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 30px;
+  transition: 0.3s linear;
+}
+
+.navbar-menu a:hover {
+  color: #d6a2e8;
+}
+
+.weather-container {
+  font-weight: 600;
+  font-size: 25px;
+  text-align: center;
+  float: right;
+}
+
+.weather-city {
+  margin-top: -20px;
+  font-size: 15px;
 }
 
 /* SEARCH BAR */
@@ -28,7 +83,7 @@ body {
 .restaurant-search {
   position: absolute;
   top: 50%;
-  left: 40%;
+  left: 10%;
   transition: translate(-50%, -50%);
   background: #2d3436;
   height: 40px;
@@ -46,7 +101,7 @@ body {
 }
 
 .restaurant-search:hover > .search-button {
-  background: linear-gradient(45deg, #D6A2E8, #FC427B);
+  background: linear-gradient(45deg, #f8efba, #fea47f);
   border: none;
   color: black;
 }
@@ -71,7 +126,7 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: linear-gradient(45deg, #5f27cd, #D6A2E8);
+  background: linear-gradient(45deg, #5f27cd, #d6a2e8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,9 +141,9 @@ body {
   background: #2d3436;
   color: #ffffff;
   width: 100%;
-  bottom: 0px;
+  bottom: 0;
   margin: auto;
-  padding: 0 20px;
+  padding: 0 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -104,17 +159,10 @@ body {
   font-size: 25px;
 }
 
-.left-column h2 {
-  font-size: 25px;
-  text-decoration: uppercase;
-  text-align: left;
-  margin-left:
-}
-
 .border {
   width: 100px;
   height: 4px;
-  background: #D6A2E8;
+  background: #d6a2e8;
 }
 
 .newsletter-form {
@@ -126,7 +174,7 @@ body {
 
 .news-text-box {
   flex: 1;
-  padding: 18px 40px;
+  padding: 12px 30px;
   font-size: 16px;
   color: black;
   border: none;
@@ -137,7 +185,7 @@ body {
 }
 
 .news-button {
-  padding: 18px 40px;
+  padding: 12px 30px;
   font-size: 16px;
   color: #ffffff;
   border: none;
@@ -146,7 +194,7 @@ body {
   outline: none;
   border-radius: 30px;
   margin-left: 10px;
-  background: linear-gradient(45deg, #5f27cd, #D6A2E8);
+  background: linear-gradient(45deg, #5f27cd, #d6a2e8);
   cursor: pointer;
   transition: opacity 0.3s linear;
 }
@@ -169,8 +217,6 @@ body {
   align-items: center;
   position: relative;
   margin: 0 10px;
-  /* border-radius: 50%;
-  background: linear-gradient(45deg, #ffda79, #f3a683); */
 }
 
 .social-buttons a::before {
@@ -178,7 +224,7 @@ body {
   position: absolute;
   width: 60px;
   height: 60px;
-  background: linear-gradient(45deg, #5f27cd, #D6A2E8);
+  background: linear-gradient(45deg, #5f27cd, #d6a2e8);
   border-radius: 50%;
   z-index: -1;
   transition: 0.3s ease-in;
@@ -197,4 +243,30 @@ body {
   -webkit-text-fill-color: transparent;
   transform: scale(2.2);
   color: #ffffff;
+}
+
+/* RESTAURANT DETAILS */
+
+.restaurant-card {
+  width: 340px;
+  background: linear-gradient(45deg, #f8efba, #fea47f);
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+  box-shadow: 0 0 20px #a4b0be;
+  text-align: center;
+  display: grid;
+  grid-template-areas: "gallery gallery gallery gallery";
+}
+
+.restaurant-top .restaurant-image {
+  width: 100%;
+}
+
+.restaurant-url {
+  text-decoration: none;
+  color: black;
+}
+
+.restaurant-url:hover {
+  color: white;
 }
