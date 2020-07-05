@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 import Weather from "./Weather";
 import Logo from "../assets/Logo-Black.png";
 import FavRestaurants from "./FavRestaurants";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { fab } from "@fortawesome/free-brands-svg-icons";
 
 export default function Header(props) {
   return (
@@ -22,8 +19,8 @@ export default function Header(props) {
           </div>
           <div className="navbar-menu">
             <Link to="/">Home</Link>
-            <a href="#">About</a>
-            <a href="./FavRestaurants">Restaurants</a>
+            <Link to="./FavRestaurants">Restaurants</Link>
+            <a href="https://www.opentable.com/">Reserve</a>
           </div>
         </nav>
       </header>

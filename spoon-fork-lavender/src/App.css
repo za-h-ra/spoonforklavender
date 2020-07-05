@@ -12,14 +12,15 @@ body {
 }
 
 .main-image {
-  height: 100%;
-  min-height: 200px;
-  position: absolute;
-  right: 0;
+  height: 800px;
+  float: right;
 }
 
 .main-title {
-  top: 50%;
+  position: absolute;
+  display: flex;
+  margin-top: 20%;
+  padding: 30px;
 }
 
 /* HEADER */
@@ -32,8 +33,6 @@ body {
   top: 0;
   z-index: 99;
   transition: 0.3s linear;
-
-  /* background-color: transparent; */
 }
 
 .navbar {
@@ -71,6 +70,20 @@ body {
   font-size: 25px;
   text-align: center;
   float: right;
+  color: black;
+  animation: color-me-in 5s infinite;
+}
+
+@keyframes color-me-in {
+  0% {
+    color: #d6a2e8;
+  }
+  50% {
+    color: #5f27cd;
+  }
+  100% {
+    color: #d6a2e8;
+  }
 }
 
 .weather-city {
@@ -247,15 +260,23 @@ body {
 
 /* RESTAURANT DETAILS */
 
+.restaurant-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 10px;
+  margin-top: 10%;
+  /* padding: 30px; */
+}
+
 .restaurant-card {
-  width: 340px;
+  width: 250px;
   background: linear-gradient(45deg, #f8efba, #fea47f);
   overflow: hidden;
   font-family: "Quicksand", sans-serif;
   box-shadow: 0 0 20px #a4b0be;
   text-align: center;
-  display: grid;
-  grid-template-areas: "gallery gallery gallery gallery";
+  /* flex-direction: column; */
 }
 
 .restaurant-top .restaurant-image {
@@ -269,4 +290,23 @@ body {
 
 .restaurant-url:hover {
   color: white;
+  text-decoration: underline;
+}
+
+.r-title {
+  font-size: 18px;
+}
+
+.r-name {
+  font-size: 20px;
+}
+
+
+/* FAV RESTAURANT GRID */
+.res-image {
+  height: 200px;
+}
+
+.res-grid {
+  background: red;
 }

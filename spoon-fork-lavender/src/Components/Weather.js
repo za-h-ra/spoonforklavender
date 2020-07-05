@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import { FontAwesomeIcon, faFontAwesome } from "@fortawesome/react-fontawesome";
-import { fab } from "@fortawesome/free-brands-svg-icons";
 import { faTemperatureHigh } from "@fortawesome/free-solid-svg-icons";
 
 export default function Weather() {
@@ -34,12 +33,8 @@ export default function Weather() {
         <div className="weather-data">
           <main className="weather-card">
             <div className="weather-box">
-              <div className="location">
                 <p className="weather-temp">{Math.floor(weather.main.temp)} <FontAwesomeIcon icon={faTemperatureHigh} /></p>
                 <p className="weather-city">{weather.name}, {weather.sys.country}</p>
-               
-              </div>
-              {/* <div className="temperature">{weather}</div> */}
             </div>
           </main>
         </div>

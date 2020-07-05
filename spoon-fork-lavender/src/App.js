@@ -7,10 +7,11 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import RestaurantList from "./Components/RestaurantList";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-import Logo from "./assets/Logo-White-2.png";
 import "./App.css";
 import FavRestaurants from "./Components/FavRestaurants";
-import Pasta from "./assets/pasta.jpg"
+
+import Pasta from "./assets/pasta.jpg";
+import SquidInk from "./assets/SquidInk.jpg"
 
 function App(props) {
   const [category, setCategory] = useState("");
@@ -50,6 +51,7 @@ function App(props) {
     e.preventDefault();
     getRestaurants(category);
     props.history.push("/restaurants");
+    setCategory("");
   };
 
   return (
@@ -57,27 +59,30 @@ function App(props) {
       <Header />
       <Route path="/" exact>
         <img className="main-image" src={Pasta}></img>
-        {/* homepage, add things in here*/}
-        {/* <h1>Discover Restaurants in NYC</h1> */}
+        <h1 className="main-title">
+          Discover your favorite cuisine <br /> in New York City
+        </h1>
         <div className="search-container">
-          <h1 className="main-title">Discover your favorite cuisine in New York City</h1>
-        <form className="restaurant-search" onSubmit={handleSubmit}>
-          <input
-            className="search-bar"
-            type="text"
-            placeholder="Search"
-            value={category}
-            onChange={handleChange}
-          />
-          <button className="search-button" type="submit">
-            <FontAwesomeIcon icon={faSearch} className="search-icon" />
-          </button>
+          <form className="restaurant-search" onSubmit={handleSubmit}>
+            <input
+              className="search-bar"
+              type="text"
+              placeholder="Search"
+              value={category}
+              onChange={handleChange}
+            />
+            <button className="search-button" type="submit">
+              <FontAwesomeIcon icon={faSearch} className="search-icon" />
+            </button>
           </form>
-          </div>
+        </div>
       </Route>
       <div>
         <Route path="/restaurants">
           <RestaurantList restaurants={restaurants} />
+        </Route>
+        <Route path="/FavRestaurants">
+          <FavRestaurants title="Sant Ambroeus" image={SquidInk} category="Italian" address="265 Lafayette St, New York, NY 10012" />
         </Route>
         <Footer />
       </div>
