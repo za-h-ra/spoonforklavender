@@ -10,7 +10,7 @@
 
 ### Description
 
-_**SPOON FORK LAVENDER** is a restaurant discovery app that allows the users to search restaurants/cafes/bars in New York City. The user is able search for restaurant which will then display a list of restaurants. The user is able to click the restaurant from the list, which provides a more detailed card of the restaurant with the name, locality, type of cuisine, address and price range of the restaurant, as well as click on the "learn more" button that will lead them to the website of the restaurant. 
+**SPOON FORK LAVENDER** is a restaurant discovery app that allows the users to search restaurants/cafes/bars in New York City. The user is able search for restaurant which will then display a list of restaurants. The user is able to click the restaurant from the list, which provides a more detailed card of the restaurant with the name, locality, type of cuisine, address and price range of the restaurant, as well as click on the "learn more" button that will lead them to the website of the restaurant. 
 
 <br>
 
