@@ -24,7 +24,7 @@ export default function FavRestaurants() {
         "Traditional & unique Thai fare served in a stylish space with dark-wood accents & ornate fixtures.",
       rating: "4.6/5",
       price: "$$",
-      category: "Thai"
+      category: "Thai",
     },
     {
       name: "Jin Ramen",
@@ -94,7 +94,7 @@ export default function FavRestaurants() {
         {cardInfo.map((card) => (
           <>
             <div className="res-card">
-             <h1 className="card-title">{card.name}</h1>
+              <h1 className="card-title">{card.name}</h1>
               <img className="card-image" src={card.image} />
               <p>{card.category}</p>
               <p>{card.price}</p>
