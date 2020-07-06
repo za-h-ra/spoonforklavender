@@ -21,10 +21,11 @@ export default function RestaurantList(props) {
                   alt=""
                   className="restaurant-image"
                 />
+                <p>{restaurant.categories[0].title} <br /> {restaurant.price}</p>
               </div>
               <div className="restaurant-details">
                 <h2 className="r-title">Address</h2>
-                <div className="address-border"></div>
+               
                 <p>
                   {restaurant.location.address1}
                   <br /> {restaurant.location.city}, {restaurant.location.state}{" "}
@@ -32,12 +33,10 @@ export default function RestaurantList(props) {
                 </p>
                 <h2 className="r-title">
                   Phone Number
-                  <div className="number-border"></div>
                 </h2>
                 <p>{restaurant.display_phone}</p>
                 <h2 className="r-title">
                   Rating
-                  <div className="rating-border"></div>
                 </h2>
                 <p>
                   {restaurant.rating} based on {restaurant.review_count} reviews

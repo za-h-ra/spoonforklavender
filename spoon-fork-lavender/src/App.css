@@ -284,7 +284,7 @@ body {
 }
 
 .restaurant-url {
-  text-decoration: none;
+  text-decoration: underline;
   color: black;
 }
 
@@ -295,6 +295,8 @@ body {
 
 .r-title {
   font-size: 18px;
+  position: relative;
+
 }
 
 .r-name {
@@ -302,11 +304,40 @@ body {
 }
 
 
-/* FAV RESTAURANT GRID */
-.res-image {
-  height: 200px;
+
+.restaurant-details {
+  padding: 40px;
+  padding-top: 0;
 }
+/* FAV RESTAURANT GRID */
 
 .res-grid {
-  background: red;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px;
+  margin-top: 10%;
+}
+
+.res-card {
+  width: 250px;
+  background: linear-gradient(45deg, #f8efba, #fea47f);
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+  box-shadow: 0 0 20px #a4b0be;
+  text-align: center;
+}
+
+.card-image {
+  width: 100%;
+}
+
+.card-title {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.card-heading {
+  font-size: 18px;
 }

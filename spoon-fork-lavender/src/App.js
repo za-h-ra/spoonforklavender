@@ -82,7 +82,7 @@ function App(props) {
           <RestaurantList restaurants={restaurants} />
         </Route>
         <Route path="/FavRestaurants">
-          <FavRestaurants title="Sant Ambroeus" image={SquidInk} category="Italian" address="265 Lafayette St, New York, NY 10012" />
+          <FavRestaurants />
         </Route>
         <Footer />
       </div>
