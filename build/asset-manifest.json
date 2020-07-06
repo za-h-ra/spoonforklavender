@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.88610ed5.chunk.css",
+    "main.js": "/static/js/main.8402afb9.chunk.js",
+    "main.js.map": "/static/js/main.8402afb9.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f3c58923.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f3c58923.js.map",
+    "static/js/2.18909665.chunk.js": "/static/js/2.18909665.chunk.js",
+    "static/js/2.18909665.chunk.js.map": "/static/js/2.18909665.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.8810c83617c9b379c160f00d125e4f5f.js": "/precache-manifest.8810c83617c9b379c160f00d125e4f5f.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.88610ed5.chunk.css.map": "/static/css/main.88610ed5.chunk.css.map",
+    "static/js/2.18909665.chunk.js.LICENSE.txt": "/static/js/2.18909665.chunk.js.LICENSE.txt",
+    "static/media/Logo-Black.png": "/static/media/Logo-Black.42b4e107.png",
+    "static/media/Logo-White-2.png": "/static/media/Logo-White-2.066e44da.png",
+    "static/media/SquidInk.jpg": "/static/media/SquidInk.f604886a.jpg",
+    "static/media/pasta.jpg": "/static/media/pasta.33504058.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f3c58923.js",
+    "static/js/2.18909665.chunk.js",
+    "static/css/main.88610ed5.chunk.css",
+    "static/js/main.8402afb9.chunk.js"
+  ]
+}
