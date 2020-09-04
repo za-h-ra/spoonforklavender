@@ -9,9 +9,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import "./App.css";
 import FavRestaurants from "./Components/FavRestaurants";
-
 import Pasta from "./assets/pasta.jpg";
-import SquidInk from "./assets/SquidInk.jpg"
 
 function App(props) {
   const [category, setCategory] = useState("");
